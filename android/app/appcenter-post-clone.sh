@@ -13,13 +13,12 @@ npm config delete prefix
 . ~/.bashrc
 nvm install "$NODE_VERSION"
 nvm alias node16 "$NODE_VERSION"
-npm i -g yarn
 
 # go to root of project
 cd ../..
 
 # install dependencies
-yarn
+npm i
 
 # run optimized production build
 npm run build -- --prod
