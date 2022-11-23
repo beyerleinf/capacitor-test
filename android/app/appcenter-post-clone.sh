@@ -3,7 +3,7 @@
 # fail if any command fails
 set -e
 # debug log
-set -x
+# set -x
 
 # Required nodeJS version
 NODE_VERSION=16.18.1
