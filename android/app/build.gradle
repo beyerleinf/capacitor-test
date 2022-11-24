@@ -17,6 +17,10 @@ android {
     def versionCode = versionProps['VERSION_CODE'].toInteger()
     def versionName = versionProps['VERSION']
 
+    logger.info('versionProps {}', versionProps)
+    logger.info('versionCode {}', versionCode)
+    logger.info('versionName {}', versionName)
+
     defaultConfig {
         applicationId "com.example.app"
         minSdkVersion rootProject.ext.minSdkVersion
