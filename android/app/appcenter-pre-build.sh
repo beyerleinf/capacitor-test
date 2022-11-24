@@ -23,3 +23,6 @@ printf "\n\
 VERSION=$Version\n\
 VERSION_CODE=$VersionCode\n\
 " > version.properties
+
+pwd
+ls -lah

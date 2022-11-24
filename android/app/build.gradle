@@ -14,16 +14,16 @@ android {
         versionProps['VERSION']='999.999'
     }
 
-    def code = versionProps['VERSION_CODE'].toInteger()
-    def name = versionProps['VERSION']
+    def versionCode = versionProps['VERSION_CODE'].toInteger()
+    def versionName = versionProps['VERSION']
 
     defaultConfig {
         applicationId "com.example.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode code
-        versionName name
-        archivesBaseName "Test-$name"
+        versionCode = versionCode
+        versionName = versionName
+        archivesBaseName = "Test-$versionName"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
              // Files and dirs to omit from the packaged assets dir, modified to accommodate modern web apps.
