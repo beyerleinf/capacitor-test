@@ -14,10 +14,10 @@ npm config delete prefix
 nvm install "$NODE_VERSION"
 nvm alias node16 "$NODE_VERSION"
 
-GitRev = $(git rev-parse --short HEAD)
-VersionSuffix = "test"
-Version = "1.$APPCENTER_BUILD_ID-$GitRev-$VersionSuffix"
-VersionCode = $APPCENTER_BUILD_ID
+GitRev=$(git rev-parse --short HEAD)
+VersionSuffix="test"
+Version="1.0.$APPCENTER_BUILD_ID-$GitRev-$VersionSuffix"
+VersionCode=$APPCENTER_BUILD_ID
 
 printf "\n\
 VERSION=$Version\n\
