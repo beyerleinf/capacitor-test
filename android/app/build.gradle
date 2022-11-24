@@ -14,19 +14,15 @@ android {
         versionProps['VERSION']='999.999'
     }
 
-    def versionCode = versionProps['VERSION_CODE'].toInteger()
-    def versionName = versionProps['VERSION']
-
-    logger.info('versionProps {}', versionProps)
-    logger.info('versionCode {}', versionCode)
-    logger.info('versionName {}', versionName)
+    def code = versionProps['VERSION_CODE'].toInteger()
+    def name = versionProps['VERSION']
 
     defaultConfig {
         applicationId "com.example.app"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode = versionCode
-        versionName = versionName
+        versionCode code
+        versionName name
         archivesBaseName = "Test-$versionName"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
